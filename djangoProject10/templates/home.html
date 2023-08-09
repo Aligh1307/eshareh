@@ -1,0 +1,19 @@
+<center>
+    {% for word in words %}
+        <video src="{{ word.video.url }}" controls width="250" height="160"></video>
+        <img src="{{ word.picture.url }}" alt="{{ word.title }}" width="250" height="160">
+        <h1>{{ word.title }}</h1>
+        <p>{{ word.pronunciation }}</p>
+        {% if user.is_authenticated %}
+            {% if word in user.favorite_words.all %}
+                <button class="btn btn-danger" onclick="window.location.href='{% url 'remove_favorites' word.id %}'"><i
+                        class="fas fa-heart-broken"></i> حذف از فهرست علاقه‌مندی‌ها
+                </button>
+            {% else %}
+                <button class="btn btn-success" onclick="window.location.href='{% url 'add_to_favorites' word.id %}'"><i
+                        class="fas fa-heart"></i> اضافه به فهرست علاقه‌مندی‌ها
+                </button>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</center>

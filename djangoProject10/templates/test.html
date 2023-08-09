@@ -1,0 +1,24 @@
+<center>
+    <style>
+        button {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        img {
+            margin: 10px;
+        }
+    </style>
+    <img src="{{ pictures.url }}" alt="picture" width="150" height="100">
+    <a href="{% url 'test' %}">
+        <button>بعدی</button>
+    </a>
+       <form method="POST">
+        {% csrf_token %}
+        {% for word in words %}
+            <input type="radio" name="answer" value="{{ word.title }}">{{ word.title }}<br>
+        {% endfor %}
+        <input type="submit" value="ثبت" >
+    </form>
+</center>

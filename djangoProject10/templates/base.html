@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>پروژه جنگویی من</title>
+</head>
+<body>
+<div id="header">
+    <h1>پروژه جنگویی من</h1>
+    <ul id="menu">
+        <li><a href="{% url 'home' %}">خانه</a></li>
+        <li><a href="{% url 'about' %}">درباره</a></li>
+        <li><a href="{% url 'contact' %}">تماس</a></li>
+    </ul>
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock content %}
+</div>
+<div id="footer">
+    <p>کپی رایت 2023 - تمام حقوق محفوظ است.</p>
+</div>
+</body>
+</html>

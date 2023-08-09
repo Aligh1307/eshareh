@@ -1,0 +1,7 @@
+.env
+db.sqlite3
+media
+.idea
+**/migrations/*
+!**/migrations/__init__.py
+

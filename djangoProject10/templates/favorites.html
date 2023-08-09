@@ -1,0 +1,91 @@
+{#<h1>فهرست علاقه‌مندی‌ها</h1>#}
+{#<ul>#}
+{#    {% for word in words %}#}
+{#        <li>{{ word.title }}</li>#}
+{#    {% endfor %}#}
+{#</ul>#}
+{#<center>#}
+{#    <style>#}
+{#        ul {#}
+{#            list-style-type: none;#}
+{#            margin: 0;#}
+{#            padding: 0;#}
+{#        }#}
+{##}
+{#        li {#}
+{#            display: inline-block;#}
+{#            margin: 10px;#}
+{#            padding: 10px;#}
+{#            background-color: #f1f1f1;#}
+{#            border-radius: 5px;#}
+{#        }#}
+{#    </style>#}
+{##}
+{#    <h1>فهرست علاقه‌مندی‌ها</h1>#}
+{#    <ul>#}
+{#        {% for word in words %}#}
+{#            <li><a href="{% url 'word' word.slug %}">{{ word.title }}</a></li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{##}
+{#</center>#}
+
+<html>
+<head>
+    <style>
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .item:hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .item-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center;">
+    <h1>فهرست علاقه‌مندی‌ها</h1>
+    <ul class="list">
+        {% for word in words %}
+            <li class="item">
+                <a class="item-link" href="{% url 'word' word.slug %}">
+                         alt="{{ word.title }}">
+                    <span class="item-title">{{ word.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

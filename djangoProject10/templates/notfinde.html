@@ -1,0 +1,92 @@
+{#<html>#}
+{#<head>#}
+{#    <style>#}
+{#        body {#}
+{#            background-color: #F0F8FF;#}
+{#            font-family: Arial, sans-serif;#}
+{#        }#}
+{##}
+{#        h1 {#}
+{#            color: #4682B4;#}
+{#            text-align: center;#}
+{#        }#}
+{##}
+{#        img {#}
+{#            display: block;#}
+{#            margin-left: auto;#}
+{#            margin-right: auto;#}
+{#            width: 50%;#}
+{#        }#}
+{##}
+{#        p {#}
+{#            color: #333333;#}
+{#            text-align: justify;#}
+{#        }#}
+{##}
+{#        a {#}
+{#            color: #4682B4;#}
+{#            text-decoration: none;#}
+{#        }#}
+{##}
+{#        a:hover {#}
+{#            text-decoration: underline;#}
+{#        }#}
+{#    </style>#}
+{#</head>#}
+{#<body>#}
+{#    <h1>صفحه مورد نظر یافت نشد</h1>#}
+{#    <img src="^4^" alt="A graphic art of a sad face">#}
+{#    <p>متاسفانه صفحه مورد نظر شما در این سایت وجود ندارد. لطفاً آدرس را بررسی کنید و مجدداً تلاش کنید</p>#}
+{#</body>#}
+{#</html>#}
+
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #FFC0CB;
+            font-family: Comic Sans MS, cursive, sans-serif;
+        }
+
+        h1 {
+            color: #FF1493;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        p {
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FF1493;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FF69B4;
+        }
+    </style>
+</head>
+<body>
+<h1>صفحه مورد نظر یافت نشد</h1>
+<p>ببخشید، صفحه مورد نظر شما در این سایت وجود ندارد. ممکن است آدرس را اشتباه وارد کرده باشید یا صفحه حذف شده باشد. لطفاً
+    ناراحت نباشید و به جستجوی خود ادامه دهید. ما همیشه در خدمت شما هستیم.</p>
+<button onclick="window.location.href={% url 'home' %}">بازگشت به صفحه اصلی</button>
+</body>
+</html>
